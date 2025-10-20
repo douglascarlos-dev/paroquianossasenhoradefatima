@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inscrição - Catequese</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+        /* Estilo opcional para centralizar o formulário e melhorar a visualização */
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            max-width: 800px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        /* Estilo para garantir que o texto no header fique centralizado verticalmente */
+        .header-content {
+            flex-grow: 1; /* Permite que o conteúdo central ocupe o espaço restante */
+            text-align: center;
+        }
+        .header-img {
+            height: 60px; /* Altura fixa para as imagens no cabeçalho */
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="p-3 d-flex justify-content-between align-items-center">
+        
+        <img src="./brasao.jpg" alt="Logo Esquerda" class="img-fluid header-img me-3">
+        
+        <div class="header-content">
+        <h1>Arquidiocese de Uberaba Catequese de Iniciação à Vida Cristã</h1>
+        <p class="mb-0">"A finalidade definitiva da catequese é a de fazer que alguém se ponha, não apenas em contato, mas em comunhão, em intimidade com Jesus Cristo: somente Ele pode levar ao amor do Pai no Espírito e fazer-nos participar na vida da Santíssima Trindade". CT5 DC75</p>
+        <p><b>Paróquia:</b> Nossa Senhora de Fátima</p>
+        </div>
+
+        <img src="./brasao.jpg" alt="Logo Direita" class="img-fluid header-img ms-3">
+        
+    </header>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 form-container">
+                
+                <form class="row g-3 needs-validation" action="#" method="POST" novalidate>
+                    
+                    <h4 class="mt-4">Dados do Catequizando(a)</h4>
+
+                    <div class="col-md-12">
+                        <label for="nome" class="form-label">Nome Completo *</label>
+                        <input type="text" class="form-control" id="nome" name="nome" required>
+                        <div class="invalid-feedback">
+                            Por favor, informe o nome completo.
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="dataNascimento" class="form-label">Data de Nascimento *</label>
+                        <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
+                        <div class="invalid-feedback">
+                            Por favor, informe a data de nascimento.
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="idade" class="form-label">Idade *</label>
+                        <input type="number" class="form-control" id="idade" name="idade" required min="1" max="100">
+                        <div class="invalid-feedback">
+                            Por favor, informe a idade.
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label d-block">É Batizado? *</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="batizado" id="batizadoSim" value="Sim" required>
+                            <label class="form-check-label" for="batizadoSim">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="batizado" id="batizadoNao" value="Não">
+                            <label class="form-check-label" for="batizadoNao">Não</label>
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor, selecione uma opção.
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label d-block">Recebeu a Eucaristia? *</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="eucaristia" id="eucaristiaSim" value="Sim" required>
+                            <label class="form-check-label" for="eucaristiaSim">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="eucaristia" id="eucaristiaNao" value="Não">
+                            <label class="form-check-label" for="eucaristiaNao">Não</label>
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor, selecione uma opção.
+                        </div>
+                    </div>
+
+                    <h4 class="mt-4">Informações de Contato e Família</h4>
+
+                    <div class="col-md-4">
+                        <label for="celular" class="form-label">Celular (com DDD) *</label>
+                        <input type="tel" class="form-control" id="celular" name="celular" pattern="[0-9]{10,11}" required>
+                        <div class="invalid-feedback">
+                            Por favor, informe um número de celular válido.
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="endereco" class="form-label">Endereço (Rua/Avenida e Número) *</label>
+                        <input type="text" class="form-control" id="endereco" name="endereco" required>
+                        <div class="invalid-feedback">
+                            Por favor, informe o endereço.
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="bairro" class="form-label">Bairro *</label>
+                        <input type="text" class="form-control" id="bairro" name="bairro" required>
+                        <div class="invalid-feedback">
+                            Por favor, informe o bairro.
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="pai" class="form-label">Nome do Pai *</label>
+                        <input type="text" class="form-control" id="pai" name="pai" required>
+                        <div class="invalid-feedback">
+                            Por favor, informe o nome do pai.
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="mae" class="form-label">Nome da Mãe *</label>
+                        <input type="text" class="form-control" id="mae" name="mae" required>
+                        <div class="invalid-feedback">
+                            Por favor, informe o nome da mãe.
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="responsavel" class="form-label">Nome do Responsável (Se diferente do Pai/Mãe) *</label>
+                        <input type="text" class="form-control" id="responsavel" name="responsavel" required>
+                        <div class="invalid-feedback">
+                            Por favor, informe o nome do responsável.
+                        </div>
+                    </div>
+                    
+                    <h4 class="mt-4">Motivação</h4>
+
+                    <div class="col-12">
+                        <label for="motivacao" class="form-label">O que motivou a buscar o processo de fé de Iniciação à Vida Cristã para seu filho(a), ou seja, POR QUE A BUSCA PELA CATEQUESE? *</label>
+                        <textarea class="form-control" id="motivacao" name="motivacao" rows="4" required></textarea>
+                        <div class="invalid-feedback">
+                            Esta resposta é obrigatória para prosseguir com a inscrição.
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-4 text-center">
+                        <button class="btn btn-primary btn-lg" type="submit">Enviar Inscrição</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5 p-3 bg-dark text-white text-center">
+        <p class="mb-0">&copy; 2025 - Paróquia Exemplo. Todos os direitos reservados. | Informações para a Catequese.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        (function () {
+            'use strict'
+            
+            var forms = document.querySelectorAll('.needs-validation')
+            
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
+</body>
+</html>
