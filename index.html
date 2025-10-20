@@ -52,13 +52,13 @@
         <div class="row justify-content-center">
             <div class="col-lg-10 form-container">
                 
-                <form class="row g-3 needs-validation" action="#" method="POST" novalidate>
+                <form class="row g-3 needs-validation" action="https://docs.google.com/forms/d/e/1FAIpQLSdKhqlZ3R7OlqLhKHSqVdCe1W4SGUqaLuVh2fkpQ00aBVyymA/formResponse" target="_self" method="POST" id="mG61Hd" jsmodel="TOfxwf Q91hve CEkLOc" data-shuffle-seed="8362754049171213813" data-clean-viewform-url="https://docs.google.com/forms/d/e/1FAIpQLSdKhqlZ3R7OlqLhKHSqVdCe1W4SGUqaLuVh2fkpQ00aBVyymA/viewform" data-response="%.@.]" data-dlp-data="%.@.null,false]" data-first-entry="0" data-last-entry="13" data-is-first-page="true" novalidate>
                     
                     <h4 class="mt-4">Dados do Catequizando(a) - FICHA DE INSCRIÇÃO</h4>
 
                     <div class="col-md-12">
                         <label for="nome" class="form-label">Nome Completo *</label>
-                        <input type="text" class="form-control" id="nome" name="nome" required>
+                        <input type="text" class="form-control" id="nome" name="entry.762075910" required>
                         <div class="invalid-feedback">
                             Por favor, informe o nome completo.
                         </div>
@@ -66,15 +66,19 @@
 
                     <div class="col-md-6">
                         <label for="dataNascimento" class="form-label">Data de Nascimento *</label>
-                        <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
+                        <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required onchange="calcularIdade()">
                         <div class="invalid-feedback">
                             Por favor, informe a data de nascimento.
                         </div>
                     </div>
 
+                    <input type="hidden" id="diaNascimento" name="entry.968858333_day">
+                    <input type="hidden" id="mesNascimento" name="entry.968858333_month">
+                    <input type="hidden" id="anoNascimento" name="entry.968858333_year">
+
                     <div class="col-md-6">
                         <label for="idade" class="form-label">Idade *</label>
-                        <input type="number" class="form-control" id="idade" name="idade" required min="1" max="100">
+                        <input type="number" class="form-control" id="idade" name="entry.535275239" required min="1" max="100">
                         <div class="invalid-feedback">
                             Por favor, informe a idade.
                         </div>
@@ -114,7 +118,7 @@
 
                     <div class="col-md-4">
                         <label for="celular" class="form-label">Celular (com DDD) *</label>
-                        <input type="tel" class="form-control" id="celular" name="celular" pattern="[0-9]{10,11}" required>
+                        <input type="tel" class="form-control" id="celular" name="entry.1062749666" pattern="[0-9]{10,11}" required>
                         <div class="invalid-feedback">
                             Por favor, informe um número de celular válido.
                         </div>
@@ -122,7 +126,7 @@
 
                     <div class="col-md-6">
                         <label for="endereco" class="form-label">Endereço (Rua/Avenida e Número) *</label>
-                        <input type="text" class="form-control" id="endereco" name="endereco" required>
+                        <input type="text" class="form-control" id="endereco" name="entry.718937431" required>
                         <div class="invalid-feedback">
                             Por favor, informe o endereço.
                         </div>
@@ -130,7 +134,7 @@
 
                     <div class="col-md-6">
                         <label for="bairro" class="form-label">Bairro *</label>
-                        <input type="text" class="form-control" id="bairro" name="bairro" required>
+                        <input type="text" class="form-control" id="bairro" name="entry.1306038702" required>
                         <div class="invalid-feedback">
                             Por favor, informe o bairro.
                         </div>
@@ -138,7 +142,7 @@
 
                     <div class="col-md-6">
                         <label for="pai" class="form-label">Nome do Pai *</label>
-                        <input type="text" class="form-control" id="pai" name="pai" required>
+                        <input type="text" class="form-control" id="pai" name="entry.432568451" required>
                         <div class="invalid-feedback">
                             Por favor, informe o nome do pai.
                         </div>
@@ -146,7 +150,7 @@
 
                     <div class="col-md-6">
                         <label for="mae" class="form-label">Nome da Mãe *</label>
-                        <input type="text" class="form-control" id="mae" name="mae" required>
+                        <input type="text" class="form-control" id="mae" name="entry.1408767565" required>
                         <div class="invalid-feedback">
                             Por favor, informe o nome da mãe.
                         </div>
@@ -154,7 +158,7 @@
 
                     <div class="col-md-12">
                         <label for="responsavel" class="form-label">Nome do Responsável (Se diferente do Pai/Mãe) *</label>
-                        <input type="text" class="form-control" id="responsavel" name="responsavel" required>
+                        <input type="text" class="form-control" id="responsavel" name="entry.1468609041" required>
                         <div class="invalid-feedback">
                             Por favor, informe o nome do responsável.
                         </div>
@@ -164,7 +168,7 @@
 
                     <div class="col-12">
                         <label for="motivacao" class="form-label">O que motivou a buscar o processo de fé de Iniciação à Vida Cristã para seu filho(a), ou seja, POR QUE A BUSCA PELA CATEQUESE? *</label>
-                        <textarea class="form-control" id="motivacao" name="motivacao" rows="4" required></textarea>
+                        <textarea class="form-control" id="motivacao" name="entry.711659155" rows="4" required></textarea>
                         <div class="invalid-feedback">
                             Esta resposta é obrigatória para prosseguir com a inscrição.
                         </div>
@@ -187,6 +191,52 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script>
+        /**
+         * Função para calcular a idade, extrair Dia, Mês e Ano, e preencher os campos.
+         */
+        function calcularIdade() {
+            const dataNascInput = document.getElementById('dataNascimento');
+            const idadeInput = document.getElementById('idade');
+            
+            // Campos hidden para Dia, Mês e Ano
+            const diaInput = document.getElementById('diaNascimento');
+            const mesInput = document.getElementById('mesNascimento');
+            const anoInput = document.getElementById('anoNascimento');
+
+            const dataNasc = new Date(dataNascInput.value + "T00:00:00"); 
+
+            // Se o campo data estiver vazio, limpa todos os campos dependentes
+            if (!dataNascInput.value || isNaN(dataNasc)) {
+                idadeInput.value = '';
+                diaInput.value = '';
+                mesInput.value = '';
+                anoInput.value = '';
+                return;
+            }
+
+            // --- CÁLCULO DA IDADE ---
+            const hoje = new Date();
+            let idade = hoje.getFullYear() - dataNasc.getFullYear();
+            const mesAtual = hoje.getMonth() - dataNasc.getMonth();
+
+            if (mesAtual < 0 || (mesAtual === 0 && hoje.getDate() < dataNasc.getDate())) {
+                idade--;
+            }
+
+            if (idade < 0) {
+                idade = 0;
+            }
+            idadeInput.value = idade;
+
+            // --- EXTRAÇÃO E PREENCHIMENTO DOS CAMPOS HIDDEN ---
+            // O JavaScript retorna o mês de 0 (Janeiro) a 11 (Dezembro), então somamos 1.
+            diaInput.value = dataNasc.getDate(); 
+            mesInput.value = dataNasc.getMonth() + 1;
+            anoInput.value = dataNasc.getFullYear();
+        }
+
+
+        // Script para ativar a validação do Bootstrap (mantido)
         (function () {
             'use strict'
             
