@@ -15,7 +15,7 @@
         .form-container {
             max-width: 800px;
             margin-top: 5px;
-            margin-bottom: 50px;
+            margin-bottom: 5px;
             padding: 30px;
             background-color: #ffffff;
             border-radius: 8px;
@@ -28,6 +28,10 @@
         }
         .header-img {
             height: 70px; /* Altura fixa para as imagens no cabeçalho */
+            width: auto;
+        }
+        .header-img-2 {
+            height: 180px; /* Altura fixa para as imagens no cabeçalho */
             width: auto;
         }
     </style>
@@ -76,6 +80,8 @@
                     <input type="hidden" id="mesNascimento" name="entry.968858333_month">
                     <input type="hidden" id="anoNascimento" name="entry.968858333_year">
                     <input type="hidden" id="catequista" name="entry.1508445511" value="On-line">
+                    <input type="hidden" id="batizadoHidden" name="entry.211367371">
+                    <input type="hidden" id="eucaristiaHidden" name="entry.1402071695">
 
                     <div class="col-md-6">
                         <label for="idade" class="form-label">Idade *</label>
@@ -88,11 +94,11 @@
                     <div class="col-md-6">
                         <label class="form-label d-block">É Batizado? *</label>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="batizado" id="batizadoSim" value="Sim" required>
+                            <input class="form-check-input" type="radio" name="batizado" id="batizadoSim" value="Sim" required onchange="atualizarStatusBatismo(this)">
                             <label class="form-check-label" for="batizadoSim">Sim</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="batizado" id="batizadoNao" value="Não">
+                            <input class="form-check-input" type="radio" name="batizado" id="batizadoNao" value="Não" onchange="atualizarStatusBatismo(this)">
                             <label class="form-check-label" for="batizadoNao">Não</label>
                         </div>
                         <div class="invalid-feedback">
@@ -103,11 +109,11 @@
                     <div class="col-md-6">
                         <label class="form-label d-block">Recebeu a Eucaristia? *</label>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="eucaristia" id="eucaristiaSim" value="Sim" required>
+                            <input class="form-check-input" type="radio" name="eucaristia" id="eucaristiaSim" value="Sim" required onchange="atualizarStatusEucaristia(this)">
                             <label class="form-check-label" for="eucaristiaSim">Sim</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="eucaristia" id="eucaristiaNao" value="Não">
+                            <input class="form-check-input" type="radio" name="eucaristia" id="eucaristiaNao" value="Não" onchange="atualizarStatusEucaristia(this)">
                             <label class="form-check-label" for="eucaristiaNao">Não</label>
                         </div>
                         <div class="invalid-feedback">
@@ -208,9 +214,9 @@
         </div>
         
     </div>
-    <center><img src="./1.png" alt="Logo" class="img-fluid header-img"></center>
-    <footer class="mt-5 p-3 bg-dark text-white text-center">
-        <p class="mb-0">&copy; 2025 - Paróquia Nossa Senhora de Fátima - Franciscanos Uberaba.</p>
+    <center><img src="./123.png" alt="Logo" class="img-fluid header-img-2"></center>
+    <footer class="mt-2 p-3 bg-dark text-white text-center">
+        <p class="mb-0">&copy; 2025 - PASCOM - Paróquia Nossa Senhora de Fátima - Franciscanos Uberaba.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
