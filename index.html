@@ -41,7 +41,7 @@
         <div class="header-content">
         <h1>Arquidiocese de Uberaba - Catequese de Iniciação à Vida Cristã</h1><br>
         <p class="mb-0">"A finalidade definitiva da catequese é a de fazer que alguém se ponha, não apenas em contato, mas em comunhão, em intimidade com Jesus Cristo: somente Ele pode levar ao amor do Pai no Espírito e fazer-nos participar na vida da Santíssima Trindade". CT5 DC75</p><br>
-        <h3><b>Paróquia:</b> Nossa Senhora de Fátima</h3>
+        <h3>Paróquia Nossa Senhora de Fátima</h3>
         </div>
 
         <img src="./catequese.png" alt="Logo Direita" class="img-fluid header-img ms-3">
@@ -75,6 +75,7 @@
                     <input type="hidden" id="diaNascimento" name="entry.968858333_day">
                     <input type="hidden" id="mesNascimento" name="entry.968858333_month">
                     <input type="hidden" id="anoNascimento" name="entry.968858333_year">
+                    <input type="hidden" id="catequista" name="entry.1508445511" value="On-line">
 
                     <div class="col-md-6">
                         <label for="idade" class="form-label">Idade *</label>
@@ -157,7 +158,7 @@
                     </div>
 
                     <div class="col-md-12">
-                        <label for="responsavel" class="form-label">Nome do Responsável (Se diferente do Pai/Mãe) *</label>
+                        <label for="responsavel" class="form-label">Nome do Responsável *</label>
                         <input type="text" class="form-control" id="responsavel" name="entry.1468609041" required>
                         <div class="invalid-feedback">
                             Por favor, informe o nome do responsável.
@@ -171,6 +172,30 @@
                         <textarea class="form-control" id="motivacao" name="entry.711659155" rows="4" required></textarea>
                         <div class="invalid-feedback">
                             Esta resposta é obrigatória para prosseguir com a inscrição.
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-4">
+                        <div class="alert alert-warning" role="alert">
+                            <h5 class="alert-heading">Atenção: Envio de Documentação!</h5>
+                            <p>Após o envio desta ficha de inscrição online, é **obrigatório** o envio dos seguintes documentos do catequizando(a):</p>
+                            <ul>
+                                <li>Cópia da Certidão de Nascimento ou RG da crinaça;</li>
+                                <li>Cópia da Certidão de Batismo (se batizado);</li>
+                                <li>Cópia da Carteira de Identidade (RG) dos pais.</li>
+                            </ul>
+                            <p class="mb-0">Os documentos devem ser enviados, digitalizados ou em foto, para o **e-mail:** <a href="mailto:uberaba.nsfat0759@gmail.com">uberaba.nsfat0759@gmail.com</a> ou via **WhatsApp:** <a href="https://wa.me/553433214520" target="_blank">34-3321-4520</a>.</p>
+                            <hr>
+                            
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="Sim" id="aceiteDocumentos" name="entry.123456789" required>
+                                <label class="form-check-label" for="aceiteDocumentos">
+                                    **Declaro que estou ciente da obrigação de enviar a cópia dos documentos nos canais informados para a efetivação da inscrição.**
+                                </label>
+                                <div class="invalid-feedback">
+                                    Você deve confirmar o envio dos documentos para prosseguir.
+                                </div>
+                            </div>
                         </div>
                     </div>
 
