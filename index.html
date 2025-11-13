@@ -99,11 +99,11 @@
                     <div class="col-md-6">
                         <label class="form-label d-block">É Batizado? *</label>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="batizado" id="batizadoSim" value="Sim" required onchange="atualizarStatusBatismo(this)">
+                            <input class="form-check-input" type="radio" name="batizado" id="batizadoSim" value="SIM" required onchange="atualizarStatusBatismo(this)">
                             <label class="form-check-label" for="batizadoSim">Sim</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="batizado" id="batizadoNao" value="Não" onchange="atualizarStatusBatismo(this)">
+                            <input class="form-check-input" type="radio" name="batizado" id="batizadoNao" value="NÃO" onchange="atualizarStatusBatismo(this)">
                             <label class="form-check-label" for="batizadoNao">Não</label>
                         </div>
                         <div class="invalid-feedback">
@@ -114,11 +114,11 @@
                     <div class="col-md-6">
                         <label class="form-label d-block">Recebeu a Eucaristia? *</label>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="eucaristia" id="eucaristiaSim" value="Sim" required onchange="atualizarStatusEucaristia(this)">
+                            <input class="form-check-input" type="radio" name="eucaristia" id="eucaristiaSim" value="SIM" required onchange="atualizarStatusEucaristia(this)">
                             <label class="form-check-label" for="eucaristiaSim">Sim</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="eucaristia" id="eucaristiaNao" value="Não" onchange="atualizarStatusEucaristia(this)">
+                            <input class="form-check-input" type="radio" name="eucaristia" id="eucaristiaNao" value="NÃO" onchange="atualizarStatusEucaristia(this)">
                             <label class="form-check-label" for="eucaristiaNao">Não</label>
                         </div>
                         <div class="invalid-feedback">
@@ -136,8 +136,8 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
-                        <label for="endereco" class="form-label">Endereço (Rua/Avenida e Número) *</label>
+                    <div class="col-md-12">
+                        <label for="endereco" class="form-label">Endereço (Rua/Avenida, Número, Bairro, Cidade e UF) *</label>
                         <input type="text" class="form-control" id="endereco" name="entry.718937431" required>
                         <div class="invalid-feedback">
                             Por favor, informe o endereço.
@@ -145,15 +145,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <label for="bairro" class="form-label">Bairro *</label>
-                        <input type="text" class="form-control" id="bairro" name="entry.1306038702" required>
-                        <div class="invalid-feedback">
-                            Por favor, informe o bairro.
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <label for="pai" class="form-label">Nome do Pai *</label>
+                        <label for="pai" class="form-label">Nome do Pai completo *</label>
                         <input type="text" class="form-control" id="pai" name="entry.432568451" required>
                         <div class="invalid-feedback">
                             Por favor, informe o nome do pai.
@@ -161,7 +153,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <label for="mae" class="form-label">Nome da Mãe *</label>
+                        <label for="mae" class="form-label">Nome da Mãe completo *</label>
                         <input type="text" class="form-control" id="mae" name="entry.1408767565" required>
                         <div class="invalid-feedback">
                             Por favor, informe o nome da mãe.
@@ -169,7 +161,7 @@
                     </div>
 
                     <div class="col-md-12">
-                        <label for="responsavel" class="form-label">Nome do Responsável *</label>
+                        <label for="responsavel" class="form-label">Nome completo do Responsável para companhar na catequese *</label>
                         <input type="text" class="form-control" id="responsavel" name="entry.1468609041" required>
                         <div class="invalid-feedback">
                             Por favor, informe o nome do responsável.
