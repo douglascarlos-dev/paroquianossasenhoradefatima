@@ -1,0 +1,161 @@
+<header class="p-3 d-flex justify-content-between align-items-center bg-white shadow-sm">
+  
+  <div class="header-content text-center flex-grow-1">
+    <h1 class="h3">Arquidiocese de Uberaba - Catequese de Iniciação à Vida Cristã</h1>
+    <p class="mb-1 text-muted fs-6">
+      <em>"A finalidade definitiva da catequese é a de fazer que alguém se ponha, não apenas em contato, mas em comunhão, em intimidade com Jesus Cristo..."</em>
+    </p>
+    <h3 class="h5 font-weight-bold">Paróquia Nossa Senhora de Fátima</h3>
+  </div>
+
+</header>
+
+<div class="container my-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 form-container bg-white p-4 rounded shadow-sm">
+      
+      <form (ngSubmit)="onSubmit()" #formRef="ngForm">
+        <h4 class="mb-4 text-center">FICHA DE INSCRIÇÃO</h4>
+        
+        <h5 class="mt-4 mb-3 text-primary">Dados do Catequizando(a)</h5>
+
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome Completo *</label>
+          <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="formData.nome" required>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="dataNascimento" class="form-label">Data de Nascimento *</label>
+            <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" [(ngModel)]="formData.dataNascimento" (change)="calcularIdade()" required>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="idade" class="form-label">Idade *</label>
+            <input type="number" class="form-control" id="idade" name="idade" [(ngModel)]="formData.idade" required readonly>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label d-block">É Batizado? *</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="batizado" id="batizadoSim" value="Sim" [(ngModel)]="formData.batizado" required>
+              <label class="form-check-label" for="batizadoSim">Sim</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="batizado" id="batizadoNao" value="Não" [(ngModel)]="formData.batizado">
+              <label class="form-check-label" for="batizadoNao">Não</label>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label d-block">Recebeu a Eucaristia? *</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="eucaristia" id="eucaristiaSim" value="Sim" [(ngModel)]="formData.eucaristia" required>
+              <label class="form-check-label" for="eucaristiaSim">Sim</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="eucaristia" id="eucaristiaNao" value="Não" [(ngModel)]="formData.eucaristia">
+              <label class="form-check-label" for="eucaristiaNao">Não</label>
+            </div>
+          </div>
+        </div>
+
+        <h5 class="mt-4 mb-3 text-primary">Informações de Contato e Família</h5>
+
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <label for="celular" class="form-label">Celular (com DDD) *</label>
+            <input type="tel" class="form-control" id="celular" name="celular" [(ngModel)]="formData.celular" required>
+          </div>
+
+          <div class="col-md-8 mb-3">
+            <label for="endereco" class="form-label">Endereço Completo *</label>
+            <input type="text" class="form-control" id="endereco" name="endereco" [(ngModel)]="formData.endereco" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="pai" class="form-label">Nome Completo do Pai *</label>
+            <input type="text" class="form-control" id="pai" name="pai" [(ngModel)]="formData.pai" required>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="mae" class="form-label">Nome Completo da Mãe *</label>
+            <input type="text" class="form-control" id="mae" name="mae" [(ngModel)]="formData.mae" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="responsavel" class="form-label">Nome Completo do Responsável *</label>
+          <input type="text" class="form-control" id="responsavel" name="responsavel" [(ngModel)]="formData.responsavel" required>
+        </div>
+
+        <h5 class="mt-4 mb-3 text-primary">Motivação</h5>
+
+        <div class="mb-3">
+          <label for="motivacao" class="form-label">Por que a busca pela Catequese? *</label>
+          <textarea class="form-control" id="motivacao" name="motivacao" rows="4" [(ngModel)]="formData.motivacao" required></textarea>
+        </div>
+
+        <h5 class="mt-4 mb-3 text-primary">Anexo de Documentação</h5>
+
+        <div class="col-12 mb-3">
+          <div class="alert alert-info">
+            <strong>Arquivos para envio:</strong>
+            <ul class="mb-1 ps-3">
+              <li>Cópia da Certidão de Nascimento ou RG do catequizando;</li>
+              <li>Cópia da Certidão de Batismo (se for batizado);</li>
+              <li>Cópia da Carteira de Identidade (RG) dos Pais/Responsáveis.</li>
+            </ul>
+            <small>Você pode anexar vários arquivos, mas o tamanho total somado não pode ultrapassar <strong>9 MB</strong>.</small>
+          </div>
+
+          <label for="anexos" class="form-label">Selecione os Arquivos *</label>
+          <input class="form-control" type="file" id="anexos" multiple (change)="onFileSelected($event)" accept="image/*,application/pdf" required>
+          
+          <div *ngIf="fileSizeError" class="text-danger mt-2 fw-bold">
+            {{ fileSizeError }}
+          </div>
+          <div *ngIf="selectedFiles.length > 0 && !fileSizeError" class="text-success mt-2">
+            Tamanho total selecionado: {{ (totalFileSize / (1024 * 1024)).toFixed(2) }} MB
+          </div>
+        </div>
+
+        <div class="col-12 mt-4">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="aceiteDocumentos" name="aceiteDocumentos" [(ngModel)]="formData.aceiteDocumentos" required>
+            <label class="form-check-label" for="aceiteDocumentos">
+              Declaro que as informações e anexos são verdadeiros.
+            </label>
+          </div>
+        </div>
+
+        <div class="col-12 mt-4 text-center">
+          <button class="btn btn-primary btn-lg w-100" type="submit" [disabled]="!formRef.form.valid || fileSizeError || isSubmitting">
+            {{ isSubmitting ? 'Enviando...' : 'Enviar Inscrição' }}
+          </button>
+        </div>
+
+        <div *ngIf="submitMessage" class="alert mt-3 text-center" [ngClass]="{'alert-success': !isError, 'alert-danger': isError}">
+          {{ submitMessage }}
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+
+  <!-- Imagem do Rodapé (Logo Franciscanos) -->
+  <div class="text-center my-4">
+    <img src="assets/123.png" alt="Logo Franciscanos" class="img-fluid header-img-2">
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="p-3 text-center w-100">
+    <p class="mb-0">&copy; 2026 - PASCOM - Paróquia Nossa Senhora de Fátima - Franciscanos Uberaba - Praça Carlos Gomes, 50, Uberaba, Minas Gerais 38015-310.</p>
+  </footer>
+
+</div> <!-- Fechamento final -->
