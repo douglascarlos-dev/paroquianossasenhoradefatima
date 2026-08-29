@@ -88,7 +88,7 @@ export class AppComponent {
     payload.append('anexos[]', file, file.name);
   }
 
-  this.http.post('https://douglascarlos.infinityfree.me/send-email.php', payload, { responseType: 'json' }).subscribe({
+  this.http.post('https://op.douglascarlos.dev/send-email.php', payload, { responseType: 'json' }).subscribe({
     next: (res: any) => {
       this.isSubmitting = false;
       this.isError = false;
