@@ -37,4 +37,14 @@ Antes de rodar o projeto localmente ou em servidor, certifique-se de ter instala
 ## Obtendo uma cópia e executando localmente:
 
 ```shell
-# Clone
+# Clone o repositório
+$ git clone [https://github.com/douglascarlos-dev/paroquianossasenhoradefatima.git](https://github.com/douglascarlos-dev/paroquianossasenhoradefatima.git)[cite: 8]
+
+# Acesse a pasta do projeto
+$ cd paroquianossasenhoradefatima
+
+# Instale as dependências
+$ npm install
+
+# Execute o servidor de desenvolvimento do Angular
+$ ng serve
