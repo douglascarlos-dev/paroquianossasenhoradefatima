@@ -1,71 +1,27 @@
-# Catequese App ⛪
+# Catequese
 
-Aplicação web desenvolvida em **Angular 18** para a gestão e acompanhamento da Paróquia Nossa Senhora de Fátima.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
 
----
+## Development server
 
-## 🛠️ Tecnologias Utilizadas
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-* **Framework:** [Angular 18](https://angular.dev/)
-* **Linguagem:** TypeScript 5.4
-* **Gerenciador de Pacotes:** npm
-* **Hospedagem / Deploy:** Cloudflare Pages
+## Code scaffolding
 
----
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## 🚀 Como Executar o Projeto Localmente
+## Build
 
-### Pré-requisitos
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-* Node.js v20+ ou v22+
-* Angular CLI instalado globalmente (`npm i -g @angular/cli@18`)
+## Running unit tests
 
-### Passo a Passo
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-1. **Clone o repositório:**
-```bash
-git clone https://github.com/douglascarlos-dev/paroquianossasenhoradefatima.git
-cd paroquianossasenhoradefatima
+## Running end-to-end tests
 
-```
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
+## Further help
 
-2. **Instale as dependências:**
-```bash
-npm install
-
-```
-
-
-3. **Inicie o servidor de desenvolvimento:**
-```bash
-ng serve
-
-```
-
-
-4. **Acesse no navegador:**
-Navegue até `http://localhost:4200/`. A aplicação atualizará automaticamente a cada alteração salva.
-
----
-
-## 📦 Build e Deploy
-
-### Compilação Local
-
-Para gerar a versão otimizada de produção:
-
-```bash
-npm run build
-
-```
-
-Os arquivos estáticos serão gerados no diretório `dist/catequese-app/browser`.
-
-### Configuração no Cloudflare Pages
-
-Ao configurar o projeto no **Cloudflare Pages**:
-
-* **Framework preset:** Angular
-* **Build command:** `npm run build`
-* **Build output directory:** `dist/catequese-app/browser`
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
