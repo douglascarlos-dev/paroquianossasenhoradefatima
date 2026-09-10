@@ -1,27 +1,40 @@
-# Catequese
+# Inscrição Catequese - Paróquia Nossa Senhora de Fátima
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+![Static Badge](https://img.shields.io/badge/Angular-v18-red) ![Static Badge](https://img.shields.io/badge/PHP-%3E%3D8.1-blue) ![Static Badge](https://img.shields.io/badge/Bootstrap-v5.3-purple) ![Static Badge](https://img.shields.io/badge/Cloudflare%20Pages-Deploy-orange)
 
-## Development server
+### Aplicação para gestão e envio de inscrições para a Catequese de Iniciação à Vida Cristã.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Sistema Web composto por um formulário reativo em Angular integrado a um backend PHP para disparo de e-mails formatados com anexos via API do Mailtrap[cite: 7].
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Recursos usados no desenvolvimento:
 
-## Build
+- [Angular](https://angular.dev/);
+- [TypeScript](https://www.typescriptlang.org/);
+- [Bootstrap](https://getbootstrap.com/);
+- [PHP](https://www.php.net/);
+- [cURL](https://www.php.net/manual/pt_BR/book.curl.php);
+- [Mailtrap API](https://mailtrap.io/);
+- [Git](https://git-scm.com);
+- [Visual Studio Code](https://code.visualstudio.com/);
+- [Cloudflare Pages](https://pages.cloudflare.com/);
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## Pré-requisitos:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Antes de rodar o projeto localmente ou em servidor, certifique-se de ter instalado:
 
-## Running end-to-end tests
+- [Node.js](https://nodejs.org/) (v18 ou superior);
+- [Angular CLI](https://angular.dev/cli);
+- Servidor Web com **PHP 8.1+**;
+- Extensão **cURL** ativada no PHP;
+- Diretivas de upload configuradas no `php.ini` (`upload_max_filesize = 16M` e `post_max_size = 20M`);
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## Obtendo uma cópia e executando localmente:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```shell
+# Clone
