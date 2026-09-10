@@ -4,7 +4,7 @@
 
 ### Aplicação para gestão e envio de inscrições para a Catequese de Iniciação à Vida Cristã.
 
-Sistema Web composto por um formulário reativo em Angular integrado a um backend PHP para disparo de e-mails formatados com anexos via API do Mailtrap[cite: 7].
+Sistema Web composto por um formulário reativo em Angular integrado a um backend PHP para disparo de e-mails formatados com anexos via API do Mailtrap.
 
 ---
 
@@ -38,7 +38,7 @@ Antes de rodar o projeto localmente ou em servidor, certifique-se de ter instala
 
 ```shell
 # Clone o repositório
-$ git clone [https://github.com/douglascarlos-dev/paroquianossasenhoradefatima.git](https://github.com/douglascarlos-dev/paroquianossasenhoradefatima.git)[cite: 8]
+$ git clone https://github.com/douglascarlos-dev/paroquianossasenhoradefatima.git
 
 # Acesse a pasta do projeto
 $ cd paroquianossasenhoradefatima
