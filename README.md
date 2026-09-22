@@ -43,3 +43,13 @@ $ npm install
 
 # Execute o servidor de desenvolvimento do Angular
 $ ng serve
+```
+
+## Configurar as Variáveis de Ambiente no Cloudflare
+
+```shell
+#Environment Variables
+MAILTRAP_API_TOKEN
+MAILTRAP_SENDER_EMAIL
+MAILTRAP_RECIPIENT_EMAIL
+```
