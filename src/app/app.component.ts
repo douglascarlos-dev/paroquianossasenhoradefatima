@@ -72,7 +72,7 @@ export class AppComponent implements OnInit {
   mensagemFeedback: { tipo: 'success' | 'danger'; texto: string } | null = null;
 
   readonly TAMANHO_MAXIMO_BYTES = 9 * 1024 * 1024;
-  private readonly API_URL = 'https://op.douglascarlos.dev/send-email.php';
+  private readonly API_URL = '/send-email';
 
   onFilesSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
