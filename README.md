@@ -29,6 +29,23 @@ Antes de rodar o projeto localmente ou em servidor, certifique-se de ter instala
 
 ---
 
+## 🏗️ Arquitetura do Sistema (Full Stack Architecture)
+
+```mermaid
+graph TD
+    A[<b>Users / Frontend</b><br/>Preenche o formulário web] --> B[<b>Angular App</b><br/>Validação de campos e limite de 9 MB]
+    B --> C[<b>Cloudflare Pages / Worker</b><br/>Conversão Base64 e orquestração]
+    C --> D[<b>Mailtrap API</b><br/>Disparo via Sending API]
+    D --> E[<b>Destinatário</b><br/>Recebe ficha e anexos]
+
+    style A fill:#f9f9f9,stroke:#333,stroke-width:1px
+    style B fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+    style C fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    style D fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style E fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+```
+---
+
 ## Obtendo uma cópia e executando localmente:
 
 ```shell
