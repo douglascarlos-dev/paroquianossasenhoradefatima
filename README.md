@@ -29,7 +29,7 @@ Antes de rodar o projeto localmente ou em servidor, certifique-se de ter instala
 
 ---
 
-## 🏗️ Arquitetura do Sistema (Full Stack Architecture)
+## Arquitetura do Sistema (Full Stack Architecture)
 
 ```mermaid
 graph TD
